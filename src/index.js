@@ -1,13 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+// import AppT from "./AppT";
+import reportWebVitals from "./reportWebVitals";
+import { Buffer } from "buffer";
+import Header from "./Header";
+import AppWeb3 from "./AppWeb3";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// @ts-ignore
+window.Buffer = Buffer;
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    {/* <AppT /> */}
+    <AppWeb3 />
   </React.StrictMode>
 );
 
